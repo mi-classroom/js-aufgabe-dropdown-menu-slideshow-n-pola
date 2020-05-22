@@ -2,7 +2,7 @@ export default class Slide {
   constructor(obj) {
     this.obj = obj;
     this.selectedObj = 0;
-    this.images = obj.querySelectorAll('.slide-show__slide');
+    this.images = obj.querySelectorAll(obj.dataset.slideShow);
     this.images[0].classList.add('slide-show__slide--visible');
   }
 
