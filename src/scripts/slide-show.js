@@ -11,6 +11,9 @@ export default class Slide {
       // eslint-disable-next-line no-plusplus
       this.selectedObj--;
       this.showImage(this.selectedObj);
+    } else {
+      this.selectedObj = this.images.length - 1;
+      this.showImage(this.selectedObj);
     }
   }
 
@@ -18,6 +21,9 @@ export default class Slide {
     if (this.selectedObj + 1 < this.images.length) {
       // eslint-disable-next-line no-plusplus
       this.selectedObj++;
+      this.showImage(this.selectedObj);
+    } else {
+      this.selectedObj = 0;
       this.showImage(this.selectedObj);
     }
   }
