@@ -12,16 +12,7 @@ function toogleMenu() {
 hamburgerButton.addEventListener('click', toogleMenu);
 
 const slideShow = document.querySelectorAll('[data-slide-show]');
-const slides = [];
 
-slideShow.forEach((elem, i) => {
-  slides[i] = new Slide(elem);
-  elem
-    .querySelector('[data-nav-previous-slide]')
-    .addEventListener('click', () => {
-      slides[i].previous();
-    });
-  elem.querySelector('[data-nav-next-slide]').addEventListener('click', () => {
-    slides[i].next();
-  });
+slideShow.forEach((elem) => {
+  new Slide(elem);
 });

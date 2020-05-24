@@ -4,6 +4,12 @@ export default class Slide {
     this.selectedObj = 0;
     this.images = obj.querySelectorAll(obj.dataset.slideShow);
     this.images[0].classList.add('slide-show__slide--visible');
+    obj.querySelector('[data-nav-next-slide]').addEventListener('click', () => {
+      this.next();
+    });
+    obj.querySelector('[data-nav-previous-slide]').addEventListener('click', () => {
+      this.previous();
+    });
   }
 
   previous() {
